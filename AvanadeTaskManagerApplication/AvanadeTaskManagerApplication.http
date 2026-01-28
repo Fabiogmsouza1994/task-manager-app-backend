@@ -1,0 +1,6 @@
+@AvanadeTaskManagerApplication_HostAddress = http://localhost:5095
+
+GET {{AvanadeTaskManagerApplication_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
