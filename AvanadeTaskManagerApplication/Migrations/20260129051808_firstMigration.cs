@@ -1,11 +1,12 @@
-﻿using Microsoft.EntityFrameworkCore.Migrations;
+﻿using System;
+using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
 namespace AvanadeTaskManagerApplication.Migrations
 {
     /// <inheritdoc />
-    public partial class FirstMigration : Migration
+    public partial class firstMigration : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -21,8 +22,8 @@ namespace AvanadeTaskManagerApplication.Migrations
                     category = table.Column<string>(type: "nvarchar(20)", nullable: true),
                     priority = table.Column<string>(type: "nvarchar(20)", nullable: true),
                     status = table.Column<string>(type: "nvarchar(20)", nullable: true),
-                    dueDate = table.Column<string>(type: "nvarchar(20)", nullable: true),
-                    createdAt = table.Column<string>(type: "nvarchar(20)", nullable: true)
+                    dueDate = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    createdAt = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>
                 {

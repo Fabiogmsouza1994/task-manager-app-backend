@@ -1,6 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Reflection.Metadata;
 
 namespace AvanadeTaskManagerApplication.Models
 {
@@ -26,10 +25,8 @@ namespace AvanadeTaskManagerApplication.Models
         [Column(TypeName = "nvarchar(20)")]
         public string status { get; set; } = string.Empty;
 
-        [Column(TypeName = "nvarchar(20)")]
-        public string dueDate { get; set; } = string.Empty;
+        public DateTime dueDate { get; set; }
 
-        [Column(TypeName = "nvarchar(20)")]
-        public string createdAt { get; set; } = string.Empty;
+        public DateTime createdAt { get; set; }
     }
 }
