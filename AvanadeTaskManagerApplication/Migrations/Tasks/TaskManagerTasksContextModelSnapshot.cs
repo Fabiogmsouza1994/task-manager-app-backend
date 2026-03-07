@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
 
-namespace AvanadeTaskManagerApplication.Migrations
+namespace AvanadeTaskManagerApplication.Migrations.Tasks
 {
     [DbContext(typeof(TaskManagerTasksContext))]
     partial class TaskManagerTasksContextModelSnapshot : ModelSnapshot

@@ -3,10 +3,10 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace AvanadeTaskManagerApplication.Migrations
+namespace AvanadeTaskManagerApplication.Migrations.Tasks
 {
     /// <inheritdoc />
-    public partial class firstMigration : Migration
+    public partial class InitTasks : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

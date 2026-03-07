@@ -4,7 +4,7 @@ namespace AvanadeTaskManagerApplication.Models
 {
     public class TaskManagerTasksContext:DbContext
     {
-        public TaskManagerTasksContext(DbContextOptions options) : base(options)
+        public TaskManagerTasksContext(DbContextOptions<TaskManagerTasksContext> options) : base(options)
         {
                 
         }

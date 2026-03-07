@@ -9,11 +9,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
 
-namespace AvanadeTaskManagerApplication.Migrations
+namespace AvanadeTaskManagerApplication.Migrations.Tasks
 {
     [DbContext(typeof(TaskManagerTasksContext))]
-    [Migration("20260129051808_firstMigration")]
-    partial class firstMigration
+    [Migration("20260201202320_InitTasks")]
+    partial class InitTasks
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
