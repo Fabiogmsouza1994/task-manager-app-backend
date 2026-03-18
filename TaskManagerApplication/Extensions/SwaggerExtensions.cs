@@ -1,4 +1,4 @@
-﻿namespace AvanadeTaskManagerApplication.Extensions
+﻿namespace TaskManagerApplication.Extensions
 {
     public static class SwaggerExtensions
     {

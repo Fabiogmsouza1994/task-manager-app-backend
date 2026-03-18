@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using System.ComponentModel.DataAnnotations.Schema;
-namespace AvanadeTaskManagerApplication.Models;
+namespace TaskManagerApplication.Models;
 
 public class AppUser : IdentityUser
 {

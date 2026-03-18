@@ -1,9 +1,9 @@
 ﻿
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using AvanadeTaskManagerApplication.Models;
+using TaskManagerApplication.Models;
 
-namespace AvanadeTaskManagerApplication.Controllers
+namespace TaskManagerApplication.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

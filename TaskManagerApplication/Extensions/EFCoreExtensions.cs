@@ -1,7 +1,7 @@
-﻿using AvanadeTaskManagerApplication.Models;
+﻿using TaskManagerApplication.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace AvanadeTaskManagerApplication.Extensions
+namespace TaskManagerApplication.Extensions
 {
     public static class EFCoreExtensions
     {

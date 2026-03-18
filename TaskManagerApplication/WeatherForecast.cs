@@ -1,4 +1,4 @@
-namespace AvanadeTaskManagerApplication
+namespace TaskManagerApplication
 {
     public class WeatherForecast
     {

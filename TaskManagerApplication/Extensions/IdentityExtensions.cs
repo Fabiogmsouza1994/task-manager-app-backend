@@ -1,10 +1,10 @@
-﻿using AvanadeTaskManagerApplication.Models;
+﻿using TaskManagerApplication.Models;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 
-namespace AvanadeTaskManagerApplication.Extensions
+namespace TaskManagerApplication.Extensions
 {
     public static class IdentityExtensions
     {

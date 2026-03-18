@@ -1,8 +1,9 @@
-﻿using AvanadeTaskManagerApplication.Controllers;
-using AvanadeTaskManagerApplication.Extensions;
-using AvanadeTaskManagerApplication.Models;
+﻿using TaskManagerApplication.Controllers;
+using TaskManagerApplication.Extensions;
+using TaskManagerApplication.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using TaskManagerApplication.Controllers;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -34,7 +35,8 @@ app
    .WithTags("Auth");
 
 app.MapGroup("/api")
-   .MapIdentityUserEndpoints();
+   .MapIdentityUserEndpoints()
+   .MapAccountEndpoints();
 
 app.Run();
 

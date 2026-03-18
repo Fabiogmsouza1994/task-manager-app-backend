@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace AvanadeTaskManagerApplication.Controllers
+namespace TaskManagerApplication.Controllers
 {
     [ApiController]
     [Route("[controller]")]

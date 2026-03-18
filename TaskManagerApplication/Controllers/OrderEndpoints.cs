@@ -1,4 +1,4 @@
-﻿namespace AvanadeTaskManagerApplication.Controllers
+﻿namespace TaskManagerApplication.Controllers
 {
     public class OrderEndpoints
     {

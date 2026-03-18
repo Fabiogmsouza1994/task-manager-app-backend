@@ -1,4 +1,4 @@
-﻿using AvanadeTaskManagerApplication.Models;
+﻿using TaskManagerApplication.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System.Text;
@@ -7,7 +7,7 @@ using System.Security.Claims;
 using System.IdentityModel.Tokens.Jwt;
 using Microsoft.Extensions.Options;
 
-namespace AvanadeTaskManagerApplication.Controllers
+namespace TaskManagerApplication.Controllers
 {
     public static class IdentityUserEndpoints
     {

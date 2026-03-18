@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 
-namespace AvanadeTaskManagerApplication.Models
+namespace TaskManagerApplication.Models
 {
     public class TaskManagerTasksContext:DbContext
     {

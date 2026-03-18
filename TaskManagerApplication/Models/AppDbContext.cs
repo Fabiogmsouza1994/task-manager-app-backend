@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
-namespace AvanadeTaskManagerApplication.Models
+namespace TaskManagerApplication.Models
 {
     public class AppDbContext : IdentityDbContext
     {

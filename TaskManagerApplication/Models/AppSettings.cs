@@ -1,4 +1,4 @@
-﻿namespace AvanadeTaskManagerApplication.Models
+﻿namespace TaskManagerApplication.Models
 {
     public class AppSettings
     {
