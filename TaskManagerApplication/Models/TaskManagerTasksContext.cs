@@ -2,7 +2,7 @@
 
 namespace TaskManagerApplication.Models
 {
-    public class TaskManagerTasksContext:DbContext
+    public class TaskManagerTasksContext : DbContext
     {
         public TaskManagerTasksContext(DbContextOptions<TaskManagerTasksContext> options) : base(options)
         {

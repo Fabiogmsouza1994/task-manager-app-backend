@@ -6,9 +6,23 @@ using Microsoft.IdentityModel.Tokens;
 using System.Security.Claims;
 using System.IdentityModel.Tokens.Jwt;
 using Microsoft.Extensions.Options;
+using Microsoft.AspNetCore.Authorization;
 
 namespace TaskManagerApplication.Controllers
 {
+    public class UserRegistrationModel
+    {
+        public string Email { get; set; }
+        public string Password { get; set; }
+        public string FullName { get; set; }
+    }
+
+    public class UserLoginModel
+    {
+        public string Email { get; set; }
+        public string Password { get; set; }
+    }
+
     public static class IdentityUserEndpoints
     {
         public static IEndpointRouteBuilder MapIdentityUserEndpoints(this IEndpointRouteBuilder app)
@@ -18,6 +32,7 @@ namespace TaskManagerApplication.Controllers
             return app;
         }
 
+        [AllowAnonymous]
         private static async Task<IResult> CreateUser(UserManager<AppUser> userManager,
                 [FromBody] UserRegistrationModel userRegistrationModel)
         {
@@ -25,7 +40,7 @@ namespace TaskManagerApplication.Controllers
             {
                 UserName = userRegistrationModel.Email,
                 Email = userRegistrationModel.Email,
-                FullName = userRegistrationModel.FullName,
+                FullName = userRegistrationModel.FullName
             };
 
             var result = await userManager.CreateAsync(
@@ -35,9 +50,10 @@ namespace TaskManagerApplication.Controllers
             if (result.Succeeded)
                 return Results.Ok(result);
             else return Results.BadRequest(result);
-    } 
+    }
 
-     private static async Task<IResult> SignIn(
+        [AllowAnonymous]
+        private static async Task<IResult> SignIn(
                 UserManager<AppUser> userManager,
                 [FromBody] UserLoginModel userLoginModel,
                 IOptions<AppSettings> appSettings)
@@ -49,10 +65,9 @@ namespace TaskManagerApplication.Controllers
 
                 var tokenDescriptor = new SecurityTokenDescriptor
                 {
-                    Subject = new ClaimsIdentity(new Claim[]
-                 {
-                     new Claim("UserID",user.Id.ToString())
-                 }),
+                    Subject = new ClaimsIdentity(new Claim[] {
+                        new Claim("UserID",user.Id.ToString())
+                    }),
                     Expires = DateTime.UtcNow.AddMinutes(10),
                     SigningCredentials = new SigningCredentials(signInKey, SecurityAlgorithms.HmacSha256Signature)
                 };

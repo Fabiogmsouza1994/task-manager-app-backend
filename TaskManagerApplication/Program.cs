@@ -1,9 +1,6 @@
 ﻿using TaskManagerApplication.Controllers;
 using TaskManagerApplication.Extensions;
 using TaskManagerApplication.Models;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.EntityFrameworkCore;
-using TaskManagerApplication.Controllers;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -39,17 +36,3 @@ app.MapGroup("/api")
    .MapAccountEndpoints();
 
 app.Run();
-
-public class UserRegistrationModel
-{
-    public string Email { get; set; }
-    public string Password { get; set; }
-    public string FullName { get; set; }
-
-}
-
-public class UserLoginModel
-{
-    public string Email { get; set; }
-    public string Password { get; set; }
-}
