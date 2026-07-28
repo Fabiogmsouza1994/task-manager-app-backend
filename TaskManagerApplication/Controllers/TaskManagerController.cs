@@ -72,7 +72,7 @@ namespace TaskManagerApplication.Controllers
                 }
             }
 
-            return NoContent();
+            return Ok(taskManagerTasks);
         }
 
         // POST: api/TaskManager

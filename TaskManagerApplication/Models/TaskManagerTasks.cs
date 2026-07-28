@@ -28,5 +28,7 @@ namespace TaskManagerApplication.Models
         public DateTime dueDate { get; set; }
 
         public DateTime createdAt { get; set; }
+
+        public DateTime? completedAt { get; set; }
     }
 }

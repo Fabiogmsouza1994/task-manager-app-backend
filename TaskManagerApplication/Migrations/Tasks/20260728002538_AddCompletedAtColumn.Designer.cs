@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using TaskManagerApplication.Models;
 
@@ -11,9 +12,11 @@ using TaskManagerApplication.Models;
 namespace TaskManagerApplication.Migrations.Tasks
 {
     [DbContext(typeof(TaskManagerTasksContext))]
-    partial class TaskManagerTasksContextModelSnapshot : ModelSnapshot
+    [Migration("20260728002538_AddCompletedAtColumn")]
+    partial class AddCompletedAtColumn
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
